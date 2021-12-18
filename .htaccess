@@ -1,0 +1,11 @@
+# Oletuksena PHP ei näytä sivulla tulleita virheilmoituksia tai varoituksia.
+# Jos haluat kehitysvaiheessa tulostaa ne ruudulle, niin poista kommentti seuraavasta asetusrivistä.  
+php_flag  display_errors           1
+
+<FilesMatch "\.(htm|html|xhtml|xml|php)$">
+    AddDefaultCharset utf-8
+</FilesMatch>
+
+SetEnv DB_DATABASE be21_mp_lo
+SetEnv DB_USERNAME db_be21_mp_lo
+SetEnv DB_PASSWORD ??????
