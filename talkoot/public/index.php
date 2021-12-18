@@ -19,13 +19,18 @@
     require_once MODEL_DIR . 'tapahtuma.php';
     $tapahtumat = haeTapahtumat();
     echo $templates->render('tapahtumat',['tapahtumat' => $tapahtumat]);
+    // ... ehtolauseen alku säilyy sellaisenaan
   } else if ($request === '/tapahtuma') {
-    echo $templates->render('tapahtuma');
-  } else {
+    require_once MODEL_DIR . 'tapahtuma.php';
+    $tapahtuma = haeTapahtuma($_GET['id']);
+    if ($tapahtuma) {
+      echo $templates->render('tapahtuma',['tapahtuma' => $tapahtuma]);
+    } else {
+      echo $templates->render('tapahtumanotfound');
+    }
+  } else { // ... loput ehtolauseesta säilyy sellaisenaan
     echo $templates->render('notfound');
   }
-
-
 
 ?> 
 
