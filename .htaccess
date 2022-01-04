@@ -8,4 +8,4 @@ php_flag  display_errors           1
 
 SetEnv DB_DATABASE be21_mp_lo
 SetEnv DB_USERNAME db_be21_mp_lo
-SetEnv DB_PASSWORD ??????
+SetEnv DB_PASSWORD Chi5Ahzaiphahh3ohcoo
