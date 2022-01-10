@@ -28,6 +28,10 @@
     } else {
       echo $templates->render('tapahtumanotfound');
     }
+    // ... ehtolauseen alku säilyy sellaisenaan
+  } else if ($request === '/lisaa_tili') {
+    echo $templates->render('lisaa_tili');
+     // ... loput ehtolauseesta säilyy sellaisenaan
   } else { // ... loput ehtolauseesta säilyy sellaisenaan
     echo $templates->render('notfound');
   }
