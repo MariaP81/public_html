@@ -37,10 +37,15 @@
           $formdata = cleanFormData($_POST);
           require_once CONTROLLER_DIR . 'tili.php';
           $tulos = lisaaTili($formdata);
-          if ($tulos['status'] == "200") {
-            echo "Tili on luotu tunnisteella $tulos[id]";
-            break;
-          }
+         
+        // ... switch-lauseen alku säilyy sellaisenaan
+        if ($tulos['status'] == "200") {
+          echo $templates->render('tili_luotu', ['formdata' => $formdata]);
+          break;
+        }
+        // ... switch-lauseen loppu säilyy sellaisenaan
+
+
           echo $templates->render('tili_lisaa', ['formdata' => $formdata, 'error' => $tulos['error']]);
           break;
         } else {
