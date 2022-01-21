@@ -3,6 +3,14 @@
   // Aloitetaan istunnot.
   session_start();
 
+  // Haetaan kirjautuneen käyttäjän tiedot.
+  if (isset($_SESSION['user'])) {
+    require_once MODEL_DIR . 'henkilo.php';
+    $loggeduser = haeHenkilo($_SESSION['user']);
+  } else {
+    $loggeduser = NULL;
+  }
+
 
   // Suoritetaan projektin alustusskripti.
   require_once '../src/init.php';
