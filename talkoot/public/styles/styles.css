@@ -88,6 +88,11 @@
     margin: 1rem auto;
   }
   
+  .error {
+    color: red;
+    font-size: 1.2rem;
+  }
+  
     
   
   
