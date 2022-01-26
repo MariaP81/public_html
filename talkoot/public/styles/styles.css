@@ -85,14 +85,18 @@
     font-size: 1rem;
   }
 
-  input[type=submit] {
-    padding: 0.5rem 3rem;
-    border-radius: 0.3rem;
-    background-color: #975579;
-    color: #fff;
+  input[type=submit], .button { 
+    font-family:'Roboto', sans-serif;
+    padding: 0.5rem 1rem;
+    border-radius: 1.3rem;
+    background-color: #c91a7a;
+    color: rgb(243, 200, 200);
     font-weight: bold;
-    min-width: 12rem;
+    min-width: 9rem;
     margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    margin-right:12.5rem;
   }
   
   .error {
@@ -113,6 +117,11 @@
   .info a {
     color: #178552;
   }
+
+  .button {
+    text-decoration: none;
+  }
+  
   
   
   
