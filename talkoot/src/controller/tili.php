@@ -112,6 +112,14 @@ function lisaaTili($formdata, $baseurl='') {
           "id"     => $idhenkilo,
           "data"   => $formdata
         ];
+
+      } else {
+        return [
+          "status" => 500,
+          "data"   => $formdata
+        ];
+
+      }
       } else {
         return [
           "status" => 500,
@@ -131,7 +139,6 @@ function lisaaTili($formdata, $baseurl='') {
   }
 }
 
-}
 
 function lahetaVahvavain($email,$url) {
   $message = "Hei!\n\n" . 
